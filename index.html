@@ -14614,6 +14614,11 @@ PLTR, TSLA, GME, NIO, ABNB, RH. We will be focussing on the first 5 for the rest
 
 </div>
 
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p><strong>PLTR dominates the discussion with a total mention count that is greater than the next 4 stocks combined!</strong></p>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
@@ -15330,8 +15335,7 @@ PLTR, TSLA, GME, NIO, ABNB, RH. We will be focussing on the first 5 for the rest
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Running linear regressions on some sample stocks</p>
-
+<p><strong>Running linear regressions on some sample stocks</strong></p>
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
@@ -15932,20 +15936,23 @@ t =  -3.973597071195131
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Our random forests model can predict whether a given comment is good due diligence with an average accuracy of around 60-70%. Furthermore, we see that our t value is -3.9 which is very far from 0. 
+<p>Our random forests model can predict whether a given comment is good due diligence with an average accuracy of around 60-70%. Furthermore, we see that our t value is -3.9 which is very far from 0. With this we can assume that our model is working as getting the same results with this t value would be unlikely if the model were not working.
 We can use this model to analyze a user's comments and then determine what analysis is the most useful to utilize in future trades.</p>
 
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="Conclusion">Conclusion<a class="anchor-link" href="#Conclusion">&#182;</a></h1><p>Based off our earlier observations and analysis we can see that metrics such as interest and sentiment</p>
+<h1 id="Conclusion">Conclusion<a class="anchor-link" href="#Conclusion">&#182;</a></h1><p>Our initial observations of the subreddit wall street bets indicates that there is a strong prevalance of "bullish" sentiment and a large amount of discussion on rising stock prices and placing calls. In addition, discussion on stocks in this period is dominated by a few key companies, most notably "PLTR".</p>
+<p>Based off our earlier observations and analysis we can see that metrics such as interest and sentiment can be a solid indicator for certain stock's performance although this may not always be a positive relationship.</p>
+<p>Finally, our random forests model has taken the data that we have observed and analyzed and attempted to form a model to differentiate between the relevant comments and the purely speculative comments that are so pervasive on the subreddit. This model can be quite useful in working with large sets of comments and needing to find the content and analysis that is relevant to actual stock traders and analysts.</p>
+<p>The stock market can be very volatile and highly unpredictable in times like these and predictions and models such as the ones we presented may not be 100% accurate. The factors that can affect a stock's price are numerous and the way they interact can be extremely complex. However, we can try to understand at least one small part of what determines stock prices and how people come to their opinion of a stock through sentiment analysis. We hope that this tutorial has provided some insight and understanding into this topic.</p>
 
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>You can learn more about using sentiment analysis for understanding the stock market at the following links</p>
+<p>You can learn more about using sentiment analysis for understanding the stock market at the following links:</p>
 <p><p><strong>Sentiment Analysis of Stocks from Financial News using Python</strong></p>
 <a href= https://towardsdatascience.com/sentiment-analysis-of-stocks-from-financial-news-using-python-82ebdcefb638> click here to read more</a></p>
 <p><p><strong>How Sentiment Analysis in Stock Market Used for Right Prediction?</strong></p>
