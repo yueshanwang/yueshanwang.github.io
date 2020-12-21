@@ -15098,7 +15098,7 @@ PLTR, TSLA, GME, NIO, ABNB, RH. We will be focussing on the first 5 for the rest
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[45]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#sentiment for a given stock</span>
@@ -15150,7 +15150,7 @@ PLTR, TSLA, GME, NIO, ABNB, RH. We will be focussing on the first 5 for the rest
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[158]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">lin_reg_time</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
@@ -15180,7 +15180,7 @@ PLTR, TSLA, GME, NIO, ABNB, RH. We will be focussing on the first 5 for the rest
     
 
     <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">12</span><span class="p">))</span>
- 
+
     <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">datetimes</span><span class="p">,</span> <span class="n">prices</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">)</span>
     
 
@@ -15194,12 +15194,12 @@ PLTR, TSLA, GME, NIO, ABNB, RH. We will be focussing on the first 5 for the rest
 
     <span class="n">predict</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">datetimes_</span><span class="p">)</span>
 
-    
     <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">datetimes</span><span class="p">,</span><span class="n">predict</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;price of &quot;</span> <span class="o">+</span> <span class="n">s</span> <span class="o">+</span>  <span class="s2">&quot; over time&quot;</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;day&quot;</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;price&quot;</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;R^2: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">clf</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">datetimes_</span><span class="p">,</span><span class="n">prices</span><span class="p">)))</span>
 </pre></div>
 
      </div>
@@ -15216,7 +15216,7 @@ PLTR, TSLA, GME, NIO, ABNB, RH. We will be focussing on the first 5 for the rest
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[159]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">lin_reg_interest</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
@@ -15277,8 +15277,7 @@ PLTR, TSLA, GME, NIO, ABNB, RH. We will be focussing on the first 5 for the rest
     <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Interest&quot;</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Price&quot;</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-    
-    
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;R^2: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">clf</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">interest_</span><span class="p">,</span><span class="n">prices</span><span class="p">)))</span>
 </pre></div>
 
      </div>
@@ -15295,13 +15294,12 @@ PLTR, TSLA, GME, NIO, ABNB, RH. We will be focussing on the first 5 for the rest
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[163]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">lin_reg_sentiment</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
     <span class="n">clf</span> <span class="o">=</span> <span class="n">linear_model</span><span class="o">.</span><span class="n">LinearRegression</span><span class="p">()</span>
 
-    <span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
     <span class="c1">#vals is sentiment</span>
     <span class="p">(</span><span class="n">dates</span><span class="p">,</span> <span class="n">vals</span><span class="p">)</span> <span class="o">=</span> <span class="n">stock_sentiment</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
     <span class="n">df</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">filter</span><span class="p">([(</span><span class="s1">&#39;Close&#39;</span><span class="p">,</span> <span class="n">s</span><span class="p">)])</span>
@@ -15335,6 +15333,7 @@ PLTR, TSLA, GME, NIO, ABNB, RH. We will be focussing on the first 5 for the rest
     <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Sentiment&quot;</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Price&quot;</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;R^2: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">clf</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">vals_</span><span class="p">,</span><span class="n">prices</span><span class="p">)))</span>
 </pre></div>
 
      </div>
@@ -15346,13 +15345,13 @@ PLTR, TSLA, GME, NIO, ABNB, RH. We will be focussing on the first 5 for the rest
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Running linear regressions on some sample stocks</p>
-<p>These graphs can give us some general observations of stock prices during this time period.</p>
+<p>These graphs can give us some general observations of stock prices during this time period. We observe PLTR, TSLA and ABNB having an overall positive trend in price over this time period while GME and NIO have an overall negative trend. We also o</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[164]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">):</span>
@@ -15394,7 +15393,7 @@ PLTR, TSLA, GME, NIO, ABNB, RH. We will be focussing on the first 5 for the rest
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>PLTR
+<pre>R^2: 0.20207202141820213
 </pre>
 </div>
 </div>
@@ -15421,6 +15420,18 @@ PLTR, TSLA, GME, NIO, ABNB, RH. We will be focussing on the first 5 for the rest
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>R^2: 0.35188220368961665
+</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
 
 
 <div class="jp-RenderedImage jp-OutputArea-output ">
@@ -15429,6 +15440,18 @@ PLTR, TSLA, GME, NIO, ABNB, RH. We will be focussing on the first 5 for the rest
 >
 </div>
 
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>R^2: 0.03182951227950592
+</pre>
+</div>
 </div>
 
 <div class="jp-OutputArea-child">
@@ -15454,7 +15477,7 @@ PLTR, TSLA, GME, NIO, ABNB, RH. We will be focussing on the first 5 for the rest
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>TSLA
+<pre>R^2: 0.621642420302355
 </pre>
 </div>
 </div>
@@ -15481,6 +15504,18 @@ PLTR, TSLA, GME, NIO, ABNB, RH. We will be focussing on the first 5 for the rest
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>R^2: 0.013109995891460113
+</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
 
 
 <div class="jp-RenderedImage jp-OutputArea-output ">
@@ -15489,6 +15524,18 @@ PLTR, TSLA, GME, NIO, ABNB, RH. We will be focussing on the first 5 for the rest
 >
 </div>
 
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>R^2: 0.0027031199785544358
+</pre>
+</div>
 </div>
 
 <div class="jp-OutputArea-child">
@@ -15514,7 +15561,7 @@ PLTR, TSLA, GME, NIO, ABNB, RH. We will be focussing on the first 5 for the rest
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>GME
+<pre>R^2: 0.3583700596156256
 </pre>
 </div>
 </div>
@@ -15541,6 +15588,18 @@ PLTR, TSLA, GME, NIO, ABNB, RH. We will be focussing on the first 5 for the rest
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>R^2: 0.09644515751117544
+</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
 
 
 <div class="jp-RenderedImage jp-OutputArea-output ">
@@ -15549,6 +15608,18 @@ PLTR, TSLA, GME, NIO, ABNB, RH. We will be focussing on the first 5 for the rest
 >
 </div>
 
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>R^2: 0.598769084391083
+</pre>
+</div>
 </div>
 
 <div class="jp-OutputArea-child">
@@ -15574,7 +15645,7 @@ PLTR, TSLA, GME, NIO, ABNB, RH. We will be focussing on the first 5 for the rest
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>NIO
+<pre>R^2: 0.0420395194849722
 </pre>
 </div>
 </div>
@@ -15601,6 +15672,18 @@ PLTR, TSLA, GME, NIO, ABNB, RH. We will be focussing on the first 5 for the rest
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>R^2: 0.14935202329960018
+</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
 
 
 <div class="jp-RenderedImage jp-OutputArea-output ">
@@ -15609,6 +15692,18 @@ PLTR, TSLA, GME, NIO, ABNB, RH. We will be focussing on the first 5 for the rest
 >
 </div>
 
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>R^2: 0.1827067435439529
+</pre>
+</div>
 </div>
 
 <div class="jp-OutputArea-child">
@@ -15634,7 +15729,7 @@ PLTR, TSLA, GME, NIO, ABNB, RH. We will be focussing on the first 5 for the rest
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>ABNB
+<pre>R^2: 0.07701898734478718
 </pre>
 </div>
 </div>
@@ -15661,6 +15756,18 @@ PLTR, TSLA, GME, NIO, ABNB, RH. We will be focussing on the first 5 for the rest
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>R^2: 0.07284100522974857
+</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
 
 
 <div class="jp-RenderedImage jp-OutputArea-output ">
@@ -15669,6 +15776,18 @@ PLTR, TSLA, GME, NIO, ABNB, RH. We will be focussing on the first 5 for the rest
 >
 </div>
 
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>R^2: 0.0335041936754229
+</pre>
+</div>
 </div>
 
 </div>
@@ -15681,12 +15800,24 @@ PLTR, TSLA, GME, NIO, ABNB, RH. We will be focussing on the first 5 for the rest
 <p><div style = "background-color: lightcoral;">
     <p style = "font-size: 20px"><strong>Understanding good comments with ML</strong></p>
 </div></p>
-<p> In the following cells we will be attempting to understand what makes a good comment on wall street bets. The importance of understand what makes good comments is based around the idea of limiting the scope of the data we need to look at. If we can understand what good comments look like then we can further direct our attention to understanding what the best traders on wall street bets are doing with their money.</p>
+<p> In the following cells we will be attempting to understand what makes a good comment on wall street bets. The importance of understand what makes good comments is based around the idea of limiting the scope of the data we need to look at. If we can understand what good comments look like then we can further direct our attention to understanding what the best traders on wall street bets are doing with their money.</p><p>In order to create a model we needed to hand label some comments as due diligence before feeding it into our function.
+This google sheets holds the first 100 comments in our dataframe that we will be using to train our model and comments will be labeled as 1 for good due diligence and 0 otherwise. this is what our y_data is.
+<a href="https://docs.google.com/spreadsheets/d/1IxiC7zmHTIi1bRlFQdGo03pC5it5eoVvODCzekALPBs/edit?usp=sharing">https://docs.google.com/spreadsheets/d/1IxiC7zmHTIi1bRlFQdGo03pC5it5eoVvODCzekALPBs/edit?usp=sharing</a></p>
+<p>For our x_data we will go through each comment and measure 6 values. These values will be</p>
+<ol>
+<li>Length of comment</li>
+<li>Number of trigger words</li>
+<li>Number of curse words</li>
+<li>Number of capital letters</li>
+<li>Number of upvotes</li>
+<li>Number of replies</li>
+</ol><p>Trigger words will be common stock terminology such as "puts", "bull", "calls" and "short".</p>
+
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[162]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -15694,6 +15825,9 @@ PLTR, TSLA, GME, NIO, ABNB, RH. We will be focussing on the first 5 for the rest
 <span class="kn">import</span> <span class="nn">math</span>
 <span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
 <span class="kn">from</span> <span class="nn">itertools</span> <span class="kn">import</span> <span class="n">islice</span>
+<span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">RandomForestClassifier</span>
+<span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LogisticRegression</span>
+<span class="kn">from</span> <span class="nn">sklearn.svm</span> <span class="kn">import</span> <span class="n">SVC</span>
 
 
 <span class="n">words</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;PUT&#39;</span><span class="p">,</span><span class="s1">&#39;PUTS&#39;</span> <span class="p">,</span><span class="s1">&#39;SOLD&#39;</span> <span class="p">,</span><span class="s1">&#39;DOWN&#39;</span> <span class="p">,</span> <span class="s1">&#39;SHORT&#39;</span><span class="p">,</span><span class="s1">&#39;BULL&#39;</span><span class="p">,</span> <span class="s1">&#39;BULLS&#39;</span><span class="p">,</span> <span class="s1">&#39;CALL&#39;</span> <span class="p">,</span> <span class="s1">&#39;CALLS&#39;</span> <span class="p">,</span> <span class="s1">&#39;BOUGHT&#39;</span> <span class="p">,</span> <span class="s1">&#39;UP&#39;</span><span class="p">,</span> <span class="s1">&#39;LONG&#39;</span><span class="p">,</span> <span class="s1">&#39;BEAR&#39;</span><span class="p">,</span> <span class="s1">&#39;BEARS&#39;</span><span class="p">]</span>
@@ -15702,12 +15836,14 @@ PLTR, TSLA, GME, NIO, ABNB, RH. We will be focussing on the first 5 for the rest
 
 
 <span class="n">x_data</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="n">y_data</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span>
-          <span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span>
-          <span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span>
+
+<span class="c1">#labeled data</span>
+<span class="n">y_data</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span>
+          <span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span>
+          <span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span>
           <span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span>
-          <span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span>
-          <span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span>
+          <span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span>
+          <span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span>
           <span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span>
           <span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span>
           <span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span>
@@ -15747,27 +15883,29 @@ PLTR, TSLA, GME, NIO, ABNB, RH. We will be focussing on the first 5 for the rest
   
     <span class="n">x_data</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">to_append</span><span class="p">)</span>
 
-<span class="n">x_train</span><span class="p">,</span> <span class="n">x_final</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_final</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">x_data</span><span class="p">,</span><span class="n">y_data</span><span class="p">,</span><span class="n">test_size</span> <span class="o">=</span> <span class="o">.</span><span class="mi">4</span><span class="p">)</span>
+<span class="n">x_train</span><span class="p">,</span> <span class="n">x_final</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_final</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">x_data</span><span class="p">,</span><span class="n">y_data</span><span class="p">,</span><span class="n">test_size</span> <span class="o">=</span> <span class="o">.</span><span class="mi">5</span><span class="p">)</span>
 
 
-<span class="c1"># this data set takes a variety of different predictors for breast cancer</span>
-<span class="c1"># and provides a way to predict whether someone actually has the cancer based on these</span>
-<span class="c1"># indicators.</span>
-<span class="c1"># the target variable is whether an individual has breast cancer, the independent variables are </span>
-<span class="c1"># mean radius  mean texture  mean perimeter  mean area  mean smoothness and so on of similar nature</span>
+<span class="n">lin_svm</span> <span class="o">=</span> <span class="n">SVC</span><span class="p">(</span><span class="n">kernel</span> <span class="o">=</span> <span class="s1">&#39;linear&#39;</span><span class="p">,</span> <span class="n">random_state</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">lin_svm</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">x_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+<span class="n">rbf_svm</span> <span class="o">=</span> <span class="n">SVC</span><span class="p">(</span><span class="n">kernel</span> <span class="o">=</span> <span class="s1">&#39;rbf&#39;</span><span class="p">,</span> <span class="n">random_state</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">rbf_svm</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">x_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+<span class="n">scores4</span> <span class="o">=</span> <span class="n">cross_val_score</span><span class="p">(</span><span class="n">lin_svm</span><span class="p">,</span> <span class="n">x_final</span><span class="p">,</span> <span class="n">y_final</span><span class="p">,</span> <span class="n">cv</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">scores5</span> <span class="o">=</span> <span class="n">cross_val_score</span><span class="p">(</span><span class="n">rbf_svm</span><span class="p">,</span> <span class="n">x_final</span><span class="p">,</span> <span class="n">y_final</span><span class="p">,</span> <span class="n">cv</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Accuracy: </span><span class="si">%0.2f</span><span class="s2"> (+/- </span><span class="si">%0.2f</span><span class="s2">)&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">scores4</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span> <span class="n">scores4</span><span class="o">.</span><span class="n">std</span><span class="p">()</span> <span class="o">*</span> <span class="mi">2</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Accuracy: </span><span class="si">%0.2f</span><span class="s2"> (+/- </span><span class="si">%0.2f</span><span class="s2">)&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">scores5</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span> <span class="n">scores5</span><span class="o">.</span><span class="n">std</span><span class="p">()</span> <span class="o">*</span> <span class="mi">2</span><span class="p">))</span>
 
-<span class="c1"># k-NN classification</span>
-<span class="kn">from</span> <span class="nn">sklearn.neighbors</span> <span class="kn">import</span> <span class="n">KNeighborsClassifier</span>
-<span class="n">neighbor</span> <span class="o">=</span> <span class="n">KNeighborsClassifier</span><span class="p">(</span><span class="n">n_neighbors</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">weights</span><span class="o">=</span><span class="s1">&#39;uniform&#39;</span><span class="p">,</span> <span class="n">algorithm</span><span class="o">=</span><span class="s1">&#39;kd_tree&#39;</span><span class="p">,</span> <span class="n">leaf_size</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">metric</span><span class="o">=</span><span class="s1">&#39;minkowski&#39;</span><span class="p">,</span> <span class="n">metric_params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">n_jobs</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
-<span class="n">neighbor</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">x_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
-<span class="n">res2</span> <span class="o">=</span> <span class="n">neighbor</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">x_final</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">res2</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">neighbor</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">x_final</span><span class="p">,</span> <span class="n">y_final</span><span class="p">))</span>
 
-<span class="c1"># 10-fold cross-validation procedure</span>
-<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">cross_val_score</span>
-<span class="n">scores1</span> <span class="o">=</span> <span class="n">cross_val_score</span><span class="p">(</span><span class="n">neighbor</span><span class="p">,</span> <span class="n">x_final</span><span class="p">,</span> <span class="n">y_final</span><span class="p">,</span> <span class="n">cv</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Accuracy: </span><span class="si">%0.2f</span><span class="s2"> (+/- </span><span class="si">%0.2f</span><span class="s2">)&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">scores1</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span> <span class="n">scores1</span><span class="o">.</span><span class="n">std</span><span class="p">()</span> <span class="o">*</span> <span class="mi">2</span><span class="p">))</span>
+<span class="n">forest</span> <span class="o">=</span> <span class="n">RandomForestClassifier</span><span class="p">(</span><span class="n">n_estimators</span> <span class="o">=</span> <span class="mi">100</span><span class="p">,</span> <span class="n">criterion</span> <span class="o">=</span> <span class="s1">&#39;gini&#39;</span><span class="p">)</span>
+<span class="n">forest</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">x_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+<span class="n">res1</span> <span class="o">=</span> <span class="n">forest</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">x_final</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">res1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">forest</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">x_final</span><span class="p">,</span> <span class="n">y_final</span><span class="p">))</span>
+
+
+
+<span class="n">scores2</span> <span class="o">=</span> <span class="n">cross_val_score</span><span class="p">(</span><span class="n">forest</span><span class="p">,</span> <span class="n">x_final</span><span class="p">,</span> <span class="n">y_final</span><span class="p">,</span> <span class="n">cv</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Accuracy: </span><span class="si">%0.2f</span><span class="s2"> (+/- </span><span class="si">%0.2f</span><span class="s2">)&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">scores2</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span> <span class="n">scores2</span><span class="o">.</span><span class="n">std</span><span class="p">()</span> <span class="o">*</span> <span class="mi">2</span><span class="p">))</span>
 
 <span class="c1"># Paired T-Test Calculation</span>
 <span class="k">def</span> <span class="nf">p_test</span><span class="p">(</span><span class="n">res2</span><span class="p">,</span> <span class="n">y_final</span><span class="p">):</span>
@@ -15776,8 +15914,9 @@ PLTR, TSLA, GME, NIO, ABNB, RH. We will be focussing on the first 5 for the rest
         <span class="n">diff</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">res2</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="n">y_final</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
 
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;t = &quot;</span><span class="p">,(</span><span class="nb">sum</span><span class="p">(</span><span class="n">diff</span><span class="p">)</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">diff</span><span class="p">))</span><span class="o">/</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">diff</span><span class="p">)</span><span class="o">/</span><span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">diff</span><span class="p">))))</span>
-<span class="c1"># k-NN classification t-test</span>
-<span class="n">p_test</span><span class="p">(</span><span class="n">res2</span><span class="p">,</span> <span class="n">y_final</span><span class="p">)</span>
+
+
+<span class="n">p_test</span><span class="p">(</span><span class="n">res1</span><span class="p">,</span> <span class="n">y_final</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -15797,11 +15936,13 @@ PLTR, TSLA, GME, NIO, ABNB, RH. We will be focussing on the first 5 for the rest
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>[0 1 0 0 0 0 0 0 1 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0
- 0 0 0]
-0.625
-Accuracy: 0.70 (+/- 0.37)
-t =  -1.3187609467915744
+<pre>Accuracy: 0.72 (+/- 0.20)
+Accuracy: 0.74 (+/- 0.18)
+[0 0 0 0 0 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1
+ 0 1 0 0 0 0 0 0 0 0 0 0 0]
+0.74
+Accuracy: 0.60 (+/- 0.25)
+t =  -2.6679112502793845
 </pre>
 </div>
 </div>
@@ -15810,6 +15951,12 @@ t =  -1.3187609467915744
 
 </div>
 
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Our random forests model can predict whether a given comment with these x characters is good due diligence with an average accuracy of around 60-70%</p>
+
+</div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
